@@ -65,19 +65,19 @@
 }
 .reset-pass-text {
     text-align: center;
-    font-size: 32px;
+    font-size: 26px;
     margin: 10px;
-    margin-bottom: -50px;
+    margin-bottom: 10px;
 }
 .forgot-pass {
     text-align: center;
     font-size: 15px;
-    margin-bottom: -30px;
+    margin-bottom: 10px;
 }
 .enter-email {
     text-align: center;
     font-size: 13px;
-    margin-bottom: -30px;
+    margin-bottom: 40px;
 }
 
 
