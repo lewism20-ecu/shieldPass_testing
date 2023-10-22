@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Log In Page</title>
+  <link rel="stylesheet" href="design/global.css">
+  <link rel="stylesheet" href="design/enter-two-factor.css">
+</head>
+
+<body>
+  <div class="right_rectangle"></div>
+  <div class="left_rectangle"></div>
+  <img class="logo" alt="shieldPass Logo" loading="eager" src="images/logo.png" />
+
+  <div class="input-container">
+    <div class="two-way"><h1>Two Factor Authentication</h1></div>
+    <p class="secure">Keep your account secure.</p>
+    <p class="enter-six-digit">Enter your six digit two factor authentication code</p>
+    <div class="two-factor-inputs">
+      <input class="number-input" type="text" maxlength="1" oninput="handleInput(0, this)" onclick="handleClick(this)" id="input0">
+      <input class="number-input" type="text" maxlength="1" oninput="handleInput(1, this)" onclick="handleClick(this)" id="input1">
+      <input class="number-input" type="text" maxlength="1" oninput="handleInput(2, this)" onclick="handleClick(this)" id="input2">
+      <input class="number-input" type="text" maxlength="1" oninput="handleInput(3, this)" onclick="handleClick(this)" id="input3">
+      <input class="number-input" type="text" maxlength="1" oninput="handleInput(4, this)" onclick="handleClick(this)" id="input4">
+    </div>
+    <div class="inputs">
+      <div class="enter-box"></div>
+      <button class="enter-button">Enter</button>
+    </div>
+  </div>
+
+  <script>
+    let previousInput = '';
+
+    function handleInput(index, element) {
+      const input = element.value;
+      if (/[^0-9]/.test(input)) {
+        element.value = input.replace(/[^0-9]/g, '');
+      }
+      if (element.value !== '' && input !== previousInput) {
+        if (index < 4) {
+          const nextInput = document.getElementById('input' + (index + 1));
+          if (nextInput.value === '') {
+            nextInput.focus();
+          }
+          else {
+            element.blur();
+          }
+        } else {
+          element.blur();
+        }
+        previousInput = input;
+      }
+    }
+
+    function clearInput(element) {
+      element.value = '';
+    }
+
+    function handleClick(element) {
+      if (element.value === '') {
+        previousInput = '';
+      } else {
+        <!-- clearInput(element); -->
+        element.select();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
