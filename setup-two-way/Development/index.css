@@ -47,7 +47,6 @@
 .inputs {
     margin: 30px;
 }
-
 .enter-button {
     position: relative;
     width: 550px;
@@ -55,6 +54,7 @@
     border: 0;
     background-color: transparent;
     border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
 }
 .enter-box {
@@ -72,15 +72,12 @@
 }
 .secure {
     text-align: center;
-    font-size: 15px;
+    font-size: 21px;
     margin-bottom: 10px;
 }
 .enter-email {
     text-align: center;
-    font-size: 12px;
+    font-size: 21px;
     margin-bottom: 30px;
 }
-
-
-
  

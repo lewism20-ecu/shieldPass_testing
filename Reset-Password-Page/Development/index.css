@@ -47,7 +47,6 @@
 .inputs {
     margin: 30px;
 }
-
 .enter-button {
     position: relative;
     width: 550px;
@@ -55,6 +54,7 @@
     border: 0;
     background-color: transparent;
     border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
 }
 .enter-box {
@@ -66,18 +66,18 @@
 }
 .reset-pass-text {
     text-align: center;
-    font-size: 26px;
+    font-size: 21px;
     margin: 10px;
     margin-bottom: 10px;
 }
 .forgot-pass {
     text-align: center;
-    font-size: 15px;
+    font-size: 21px;
     margin-bottom: 10px;
 }
 .enter-email {
     text-align: center;
-    font-size: 13px;
+    font-size: 21px;
     margin-bottom: 40px;
 }
 
