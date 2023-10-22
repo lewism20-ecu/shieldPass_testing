@@ -54,6 +54,7 @@
     border: 0;
     background-color: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 .enter-box {
     position: absolute;
@@ -73,21 +74,45 @@
     font-size: 24px;
     margin-bottom: 10px;
 }
-.no-account-text {
-    /* display: flex; */
-    position: relative;
-    font-size: 24px;
-    margin-right: 6px;
-}
-.sign-up-button {
-    width: 150px;
-    height: 24px;
-}
-.sign-up-button-container {
-    /* position: absolute; */
-    /* background-color: transparent; */
-}
 .no-account-container {
     display: flex;
     justify-content: center;
+}
+.no-account-text {
+    /* display: flex; */
+    position: absolute;
+    font-size: 24px;
+    margin-right: 6px;
+}
+.sign-up-button-container {
+    position: relative;
+    left: 24%;
+    margin-bottom: 20px;
+}
+.sign-up-button {
+    width: 165px;
+    height: 27px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+}
+.reset-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+.reset-text {
+    text-align: center;
+    position: relative;
+}
+.reset-button {
+    position: absolute;
+    width: 130px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
 }
