@@ -54,6 +54,7 @@
     border: 0;
     background-color: transparent;
     border-radius: 5px;
+    cursor: pointer;
 }
 .enter-box {
     position: absolute;
