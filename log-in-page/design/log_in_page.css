@@ -46,6 +46,12 @@
     font-size: 20px;
     text-indent: 20px;
 }
+.invalid_email {
+    display: none;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
 .enter-button {
     position: relative;
     width: 550px;

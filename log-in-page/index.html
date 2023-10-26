@@ -20,7 +20,8 @@
         </div>
         <div class="inputs">
             <div style="margin-bottom: 6px;"><p style="font-size: 20px;">Email</p></div>
-            <input class="input" type="text" placeholder="Email">
+            <input class="input" id="email_input" type="text" placeholder="Email">
+            <p class="invalid_email" id="invalid_email">Invalid email address.</p>
         </div>
         <div class="inputs">
             <div style="margin-bottom: 6px;"><p style="font-size: 20px;">Password</p></div>
@@ -28,14 +29,42 @@
         </div>
         <div class="inputs">
             <div class="enter-box"></div>
-            <button class="enter-button">Login</button>
+            <button class="enter-button" onclick="ValidateEmail()">Login</button>
         </div>
         <div class="reset-container">
             <div class="reset-text"><p><span style="color: #0DBC62;">Reset password</span></p></div>
             <button class="reset-button"></button>
         </div>
     </div>
-    
+
+    <script>
+      function ValidateEmail() {
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*.com$/;
+      
+        if ((document.getElementById('email_input')).value.match(validRegex)) {
+          showEmailMessage(true);
+          return true;
+      
+        } else {
+          showEmailMessage(false);
+          return false;
+        }
+      }
+      
+      function showEmailMessage(input) {
+        var email_i = document.getElementById('invalid_email');
+      
+        email_i.style.display = 'none';
+      
+        if (input === true) {
+
+        }
+        else {
+          email_i.style.display = 'block';
+        }
+      }
+    </script>
+
 </body>
 
 </html>
